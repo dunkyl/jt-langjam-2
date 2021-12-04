@@ -17,3 +17,17 @@
  - inverse functions composed with string deterpolation
      `"b is 786 squared": "b is {sqrt(b)} squared"` think in english, reading the pattern on the right is true
      - another good reason for single-case matches
+
+: matches left and right (doesnt care about order?)
+
+pattern : type matches on type, looks like type annotation
+unbound identifier followed by aprens binds a function
+
+`double(a: Int): multiply(a, 2)` then `double(2)` is `4` and `double("foo")` is a `mismatch("a passed as "foo" did not match pattern Int")`
+i guess mismatch could be the only error type for fun
+```
+foo : "foo"
+double(foo)
+: mismatch(note) -> "foo doubling error was {note}"
+: x -> "foo doubled is {x}"
+```
